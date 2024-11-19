@@ -3,6 +3,7 @@ help:
 	@echo "run: runs the docker image for the hello-world-app"
 	@echo "kubeval: performs manifest validation k8syaml"
 	@echo "kube-score: static code analysis manifest"
+	@echo "deploy: deploys manifests"
 
 build:
 	docker build -f ./Dockerfile -t hello-world-app:1.0.0 . --no-cache
