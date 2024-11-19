@@ -1,0 +1,35 @@
+---
+# Ingress could be used for non-local
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# kmetadata:
+#   annotations:
+#     kubernetes.io/ingress.class: gce
+#     kubernetes.io/tls-acme: "true"
+#     nginx.ingress.kubernetes.io/proxy-body-size: "0"
+#   labels:
+#     app.kubernetes.io/name: simple-hw
+#     app.kubernetes.io/version: "0.1"
+#   name: simple-hw-ingress
+#   namespace: ns-simple-hw
+# spec:
+#   rules: 
+#   - host: simple-hw.local
+#     http:
+#       paths:
+#       - path: "/"
+#         prefix: "Exact"
+#         backend:
+#           service:
+#             name: simple-hw-service
+#             port:
+#               number: 8000
+# for tls
+# could put in a secret
+---
+# could have used config map for port, and used environment variables in node server 
+---
+ # could put quota on namespace
+# Could put in an hpa
+# only 2 replicas asked for though
+---
