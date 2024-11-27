@@ -49,6 +49,9 @@ spec:
         image: hello-world-app:1.0.0
         imagePullPolicy: IfNotPresent       # Should use Always if using registry
         ports:
+# This was done for an intervierw, and was questioned on whether it works, so obviously not tried, and the fact that the
+# containerport is purely documentation... and does not affect the functionality 
+# https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/#container-v1-core
         - containerPort: 8080
           name: http
           protocol: TCP
